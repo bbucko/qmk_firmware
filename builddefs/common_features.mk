@@ -967,3 +967,10 @@ ifeq ($(strip $(UART_DRIVER_REQUIRED)), yes)
     OPT_DEFS += -DHAL_USE_SERIAL=TRUE
     QUANTUM_LIB_SRC += uart.c
 endif
+
+ifeq ($(strip $(OS_DETECTION_ENABLE)), yes)
+    OPT_DEFS += -DOS_DETECTION_ENABLE
+    ifeq ($(strip $(OS_DETECTION_DEBUG_ENABLE)), yes)
+        OPT_DEFS += -DOS_DETECTION_DEBUG_ENABLE
+    endif
+endif

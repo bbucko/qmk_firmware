@@ -31,4 +31,4 @@ void factory_test_task(void);
 void factory_test_rx(uint8_t *data, uint8_t length);
 
 bool process_record_factory_test(uint16_t keycode, keyrecord_t *record);
-
+bool process_dip_switch_factory_test(uint8_t index, bool active);
